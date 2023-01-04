@@ -31,6 +31,7 @@ group :development, :test do
   gem "pry", "~> 0.14.1"
   gem "pry-rails", "~> 0.3.9"
   gem "rspec-rails", "~> 6.0"
+  gem "erb2haml", "~> 0.1.5"
 end
 
 group :development do
@@ -40,9 +41,4 @@ group :development do
   gem "spring-watcher-listen", "~> 2.1"
   gem "mailcatcher", "~> 0.2.4"
 end
-
-
-
-
-
 
