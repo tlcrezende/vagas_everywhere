@@ -6,12 +6,16 @@
     #navbarSupportedContent.collapse.navbar-collapse
       %ul.navbar-nav.me-auto.mb-2.mb-lg-0
         %li.nav-item
-          %a.nav-link.active.text-white{"aria-current" => "page", :href => "#"} Inicio
+          %a.nav-link.active.text-white{"aria-current" => "page", :href => root_path} Inicio
         %li.nav-item
-          %a.nav-link.text-white{:href => "#"} Login/Cadastro
+          %a.nav-link.active.text-white{"aria-current" => "page", :href => root_path} Minha Empresa
+        - unless user_signed_in?
+          %li.nav-item
+            %a.nav-link.text-white{:href => new_user_session_path} Login/Cadastro
         %li.nav-item.dropdown
+        - if user_signed_in?
           %a.nav-link.dropdown-toggle.text-white{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
-            Configurações
+            Sair
           %ul.dropdown-menu
             %li
               = link_to('Sair', destroy_user_session_path, method: :delete, data: { 'turbo-method': :delete }, class: "a.dropdown-item")
