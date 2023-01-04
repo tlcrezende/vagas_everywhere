@@ -42,3 +42,5 @@ group :development do
   gem "mailcatcher", "~> 0.2.4"
 end
 
+
+gem "letter_opener", "~> 1.8"
