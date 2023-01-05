@@ -28,8 +28,6 @@ gem "haml-rails", "~> 2.1"
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "byebug", "~> 11.1"
-  gem "pry", "~> 0.14.1"
-  gem "pry-rails", "~> 0.3.9"
   gem "rspec-rails", "~> 6.0"
   gem "erb2haml", "~> 0.1.5"
 end
